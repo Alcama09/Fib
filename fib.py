@@ -21,14 +21,14 @@ def fibonacci_iterative(n: int) -> int:
     return nth
 
 
-cache = {}
+from functools import cache
 
-
+@cache
 def fibonacci_recursive(n: int) -> int:
     """
-    Computes the n-th Fibonacci number with memoization.
+    Computes the i-th Fibonacci number with memoization.
     :param n: i-th Fibonacci number.
-    :return: The n-th Fibonacci number.
+    :return: The i-th Fibonacci number.
     """
     if n < 0:
         raise ValueError("n must be greater than or equal to 0.")

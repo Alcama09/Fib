@@ -21,9 +21,9 @@ def fibonacci_iterative(n: int) -> int:
     return nth
 
 
-cache = {}
+from functools import cache
 
-
+@cache
 def fibonacci_recursive(n: int) -> int:
     """
     Computes the n-th Fibonacci number with memoization.
